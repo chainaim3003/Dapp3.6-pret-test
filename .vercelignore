@@ -1,16 +1,21 @@
 node_modules
 .env
 .env.local
-.env.example
 *.log
 .git
-build
-src
-scripts
-images
+.DS_Store
+coverage/
+# Keep build files for deployment
+# build/
+# Keep source for building on Vercel
+# src/
+scripts/
+images/
 *.md
 .gitignore
-tsconfig.json
-babel.config.cjs
 runAllTests.sh
+# Keep TypeScript config for Vercel build
+# tsconfig.json
+# Keep babel config for build process
+# babel.config.cjs
 test-infrastructure.mjs
