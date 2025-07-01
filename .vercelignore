@@ -1,0 +1,16 @@
+node_modules
+.env
+.env.local
+.env.example
+*.log
+.git
+build
+src
+scripts
+images
+*.md
+.gitignore
+tsconfig.json
+babel.config.cjs
+runAllTests.sh
+test-infrastructure.mjs
