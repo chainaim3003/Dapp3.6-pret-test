@@ -60,7 +60,7 @@
     "test:gleif-multi-refactored-infra": "npm run build && node ./build/tests/with-sign/GLEIFOptimMultiCompanyRefactoredInfrastructureTestWithSign.js",
     "test:gleif-infrastructure": "npm run build && node ./build/tests/with-sign/GLEIFOptimInfrastructureTestWithSign.js",
     "test:gleif-updated": "npm run build && node --experimental-vm-modules --experimental-wasm-modules --experimental-wasm-threads ./build/tests/with-sign/GLEIFOptimVerificationTestWithSignUtilsUpdated.js",
-    "vercel-build": "npx tsc",
+    "vercel-build": "./node_modules/.bin/tsc",
     "vercel-dev": "npm run dev",
     "deploy": "vercel --prod",
     "deploy-preview": "vercel"
@@ -87,8 +87,7 @@
     "prettier": "^2.3.2",
     "ts-jest": "^27.0.7",
     "ts-node": "^10.9.2",
-    "tsconfig-paths": "^4.2.0",
-    "typescript": "^4.9.5"
+    "tsconfig-paths": "^4.2.0"
   },
   "peerDependencies": {
     "o1js": "^1.1.0"
@@ -105,6 +104,7 @@
     "merkletreejs": "^0.4.0",
     "module-alias": "^2.2.3",
     "tsx": "^4.19.4",
+    "typescript": "^4.9.5",
     "xmldom": "^0.6.0",
     "xpath": "^0.0.34",
     "zod": "^3.24.2"
