@@ -14,7 +14,7 @@
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
   "scripts": {
-    "copy-wasm": "cp -r node_modules/o1js/dist/node/bindings/compiled/_node_bindings/* build/",
+    "copy-wasm": "node copy-wasm.js",
     "build": "npx tsc",
     "build-enhanced": "node build-enhanced.js",
     "build-info": "node build-enhanced.js",
@@ -49,7 +49,7 @@
     "test:all-risk-optimerkle": "npm run test:advanced-risk-optimerkle && npm run test:basel3-risk-optimerkle && npm run test:stablecoin-risk-optimerkle",
     "test:verify-merkle-fixes": "npm run build && node ./build/verify-merkle-fixes.js",
     "build-ts-only": "npx tsc",
-    "build-working": "cp -r build.working-copy/* build/",
+    "build-working": "node scripts/copy-build-working.js",
     "verify-build": "echo \"Build files: $(find build/ -name \"*.js\" | wc -l)\"",
     "postinstall": "npm run build",
     "test:infrastructure": "node test-infrastructure.mjs",
@@ -60,7 +60,7 @@
     "test:gleif-multi-refactored-infra": "npm run build && node ./build/tests/with-sign/GLEIFOptimMultiCompanyRefactoredInfrastructureTestWithSign.js",
     "test:gleif-infrastructure": "npm run build && node ./build/tests/with-sign/GLEIFOptimInfrastructureTestWithSign.js",
     "test:gleif-updated": "npm run build && node --experimental-vm-modules --experimental-wasm-modules --experimental-wasm-threads ./build/tests/with-sign/GLEIFOptimVerificationTestWithSignUtilsUpdated.js",
-    "vercel-build": "npm run build && npm run copy-wasm",
+    "vercel-build": "npm run build",
     "vercel-dev": "npm run dev",
     "deploy": "vercel --prod",
     "deploy-preview": "vercel"
