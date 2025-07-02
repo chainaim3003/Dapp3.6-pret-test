@@ -1,39 +1,11 @@
 {
   "version": 2,
-  "name": "zk-pret-core-engine",
   "functions": {
-    "api/**.js": {
-      "runtime": "nodejs18.x",
+    "api/*.js": {
       "memory": 1024,
       "maxDuration": 300
     }
   },
-  "rewrites": [
-    {
-      "source": "/api/health",
-      "destination": "/api/health.js"
-    },
-    {
-      "source": "/api/gleif/(.*)",
-      "destination": "/api/gleif.js"
-    },
-    {
-      "source": "/api/corporate/(.*)",
-      "destination": "/api/corporate.js"
-    },
-    {
-      "source": "/api/exim/(.*)",
-      "destination": "/api/exim.js"
-    },
-    {
-      "source": "/api/risk/(.*)",
-      "destination": "/api/risk.js"
-    },
-    {
-      "source": "/api/(.*)",
-      "destination": "/api/index.js"
-    }
-  ],
   "headers": [
     {
       "source": "/api/(.*)",
@@ -52,9 +24,5 @@
         }
       ]
     }
-  ],
-  "env": {
-    "NODE_ENV": "production",
-    "BUILD_ENV": "TESTNET"
-  }
+  ]
 }
