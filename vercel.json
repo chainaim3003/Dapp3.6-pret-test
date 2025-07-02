@@ -3,7 +3,7 @@
   "name": "zk-pret-core-engine",
   "functions": {
     "api/**.js": {
-      "runtime": "@vercel/node@3",
+      "runtime": "nodejs18.x",
       "memory": 1024,
       "maxDuration": 300
     }
