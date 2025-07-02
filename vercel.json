@@ -1,12 +1,13 @@
 {
   "version": 2,
   "name": "zk-pret-core-engine",
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/node@3"
+  "functions": {
+    "api/**.js": {
+      "runtime": "@vercel/node@3",
+      "memory": 1024,
+      "maxDuration": 300
     }
-  ],
+  },
   "routes": [
     {
       "src": "/api/health",
@@ -33,13 +34,6 @@
       "dest": "/api/index.js"
     }
   ],
-  "functions": {
-    "api/**.js": {
-      "runtime": "@vercel/node@3",
-      "memory": 1024,
-      "maxDuration": 300
-    }
-  },
   "env": {
     "NODE_ENV": "production",
     "BUILD_ENV": "TESTNET"
