@@ -8,36 +8,32 @@
       "maxDuration": 300
     }
   },
-  "routes": [
+  "rewrites": [
     {
-      "src": "/api/health",
-      "dest": "/api/health.js"
+      "source": "/api/health",
+      "destination": "/api/health.js"
     },
     {
-      "src": "/api/gleif/(.*)",
-      "dest": "/api/gleif.js"
+      "source": "/api/gleif/(.*)",
+      "destination": "/api/gleif.js"
     },
     {
-      "src": "/api/corporate/(.*)",
-      "dest": "/api/corporate.js"
+      "source": "/api/corporate/(.*)",
+      "destination": "/api/corporate.js"
     },
     {
-      "src": "/api/exim/(.*)",
-      "dest": "/api/exim.js"
+      "source": "/api/exim/(.*)",
+      "destination": "/api/exim.js"
     },
     {
-      "src": "/api/risk/(.*)",
-      "dest": "/api/risk.js"
+      "source": "/api/risk/(.*)",
+      "destination": "/api/risk.js"
     },
     {
-      "src": "/api/(.*)",
-      "dest": "/api/index.js"
+      "source": "/api/(.*)",
+      "destination": "/api/index.js"
     }
   ],
-  "env": {
-    "NODE_ENV": "production",
-    "BUILD_ENV": "TESTNET"
-  },
   "headers": [
     {
       "source": "/api/(.*)",
@@ -56,5 +52,9 @@
         }
       ]
     }
-  ]
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "BUILD_ENV": "TESTNET"
+  }
 }
