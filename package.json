@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "main": "api/index.js",
+  "scripts": {
+    "build": "echo 'No build needed - API files ready'"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
