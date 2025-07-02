@@ -60,7 +60,7 @@
     "test:gleif-multi-refactored-infra": "npm run build && node ./build/tests/with-sign/GLEIFOptimMultiCompanyRefactoredInfrastructureTestWithSign.js",
     "test:gleif-infrastructure": "npm run build && node ./build/tests/with-sign/GLEIFOptimInfrastructureTestWithSign.js",
     "test:gleif-updated": "npm run build && node --experimental-vm-modules --experimental-wasm-modules --experimental-wasm-threads ./build/tests/with-sign/GLEIFOptimVerificationTestWithSignUtilsUpdated.js",
-    "vercel-build": "npm run build",
+    "vercel-build": "tsc",
     "vercel-dev": "npm run dev",
     "deploy": "vercel --prod",
     "deploy-preview": "vercel"
