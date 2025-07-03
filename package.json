@@ -2,14 +2,28 @@
   "name": "zk-pret-core",
   "version": "1.0.0",
   "type": "module",
-  "main": "api/index.js",
+  "main": "build/api/index.js",
   "scripts": {
-    "build": "echo 'No build needed - API files ready'"
+    "build": "tsc",
+    "clean": "rimraf build",
+    "dev": "tsc --watch",
+    "test": "node ./test-infrastructure.mjs",
+    "test:all": "bash runAllTests.sh",
+    "start": "node build/api/index.js",
+    "verify": "tsc --noEmit"
   },
   "dependencies": {
+    "o1js": "^1.6.0",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^4.21.2",
     "axios": "^1.7.9"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/express": "^4.17.21",
+    "@types/cors": "^2.8.17",
+    "typescript": "^5.3.3",
+    "rimraf": "^5.0.5"
   }
 }
